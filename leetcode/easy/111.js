@@ -1,0 +1,9 @@
+// Runtime: 60ms => 82%
+// Memory: 37.2MB => 80%
+
+const minDepth = (root) => {
+    if (!root) {return 0;}
+    if (!root.left) {return minDepth(root.right) +1;}
+    if (!root.right) {return minDepth(root.left) +1;}
+    return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
+};
