@@ -1,5 +1,5 @@
-// Runtime: 68ms => 92.45%
-// Memory: 60%
+// Runtime: 64ms => 97.5%
+// Memory: 40.360%
 
 const isMonotonic = (A) => {
     if (A.length === 0) {return false;}
