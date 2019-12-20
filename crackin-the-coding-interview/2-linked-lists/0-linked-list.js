@@ -28,4 +28,13 @@ class LinkedList {
         currentNode.next = newNode;
         return this.head;
     }
+    getValues() {
+        const values = [];
+        let currentNode = this.head;
+        while (currentNode.next !== null) {
+            values.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+        return values;
+    }
 }
