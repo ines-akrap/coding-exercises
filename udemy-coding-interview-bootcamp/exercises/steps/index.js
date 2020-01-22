@@ -17,6 +17,16 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+
+// 2 for loops -> O(n^2)
+// possible with recursion
+
+function steps(n) {
+    const steps = new Array(n).fill(' ');
+    for (let i=0; i<n; i++) {
+        steps[i] = '#';
+        console.log(steps.join(''));
+    }
+}
 
 module.exports = steps;
