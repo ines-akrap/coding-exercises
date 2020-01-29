@@ -40,6 +40,16 @@ class Tree {
             func(node);
         }
     }
+    traverseDF(func) {
+        if (!this.root) {return;}
+        const queue = [];
+        queue.push(this.root);
+        while (queue.length) {
+            const node = queue.shift();
+            queue.unshift(...node.children);
+            func(node);
+        }
+    }
 }
 
 module.exports = { Tree, Node };
