@@ -30,6 +30,16 @@ class Tree {
     constructor() {
         this.root = null;
     }
+    traverseBF(func) {
+        if (!this.root) {return;}
+        const queue = [];
+        queue.push(this.root);
+        while (queue.length) {
+            const node = queue.shift();
+            queue.push(...node.children);
+            func(node);
+        }
+    }
 }
 
 module.exports = { Tree, Node };
