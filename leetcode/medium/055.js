@@ -1,5 +1,5 @@
-// Runtime:
-// Memory:
+// Runtime: 52ms => 92.68%
+// Memory: 35.8MB => 20%
 
 const canJump = (nums) => {
     let index = 0;
